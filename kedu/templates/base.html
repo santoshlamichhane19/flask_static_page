@@ -1,0 +1,122 @@
+<html>
+
+<head>
+
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+
+  <style>
+    .bg-primary-custom {
+      background-color: #304ffe;
+    }
+  </style>
+</head>
+
+<body style="font-family: 'PT Serif' ;" class="bg-light">
+  <div class="jumbotron mb-0">
+    <div class="container text-center">
+      <h5 class="display-2">You Future Begins Here</h5>
+      <p class="text-primary">Some Paragraph text goes here</p>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top mb-2">
+    <a class="navbar-brand" href="{{url_for('home')}}">Kantipur Educare- We Care</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#showburgermenu"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="showburgermenu">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link  border-bottom border-warning text-light ml-1 mr-1" href="{{url_for('about')}}">About</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link border-bottom border-warning text-light ml-1 mr-1 dropdown-toggle" href="#"
+            id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Programs
+          </a>
+          <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item text-warning" href="{{url_for('ielts')}}">IELTS</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item text-warning" href="{{url_for('pte')}}">PTE</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item text-warning" href="{{url_for('prep')}}">Prepration</a>
+
+          </div>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link  border-bottom border-warning text-light ml-1 mr-1" href="{{url_for('blog')}}">Blog</a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link  border-bottom border-warning text-light ml-1 mr-1"
+            href="{{url_for('contact')}}">Contact</a>
+        </li>
+
+    </div>
+  </nav>
+  <main>
+    <div class="container">
+      {% block content %}
+
+      {% endblock %}
+    </div>
+
+  </main>
+
+
+  <footer class="navbar bg-light navbar-light border border-top-dark  ">
+    <div class="container-fluid">
+      <div class="row w-100 justify-contents-around">
+        <div class="col-md-4 text-center">
+          <h5 class="text-danger "><strong>Contact</strong></h5>
+          <div>
+            <p>123 Street Name <br>Phone Number: +977-1-1234567</p>
+
+          </div>
+
+        </div>
+        <div class="col-md-4 text-justify">
+          <div>
+            <h5 class="text-danger text-center"><strong>Heading</strong></h5>
+            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for
+              previewing layouts and visual mockups.</p>
+          </div>
+
+        </div>
+
+        <div class="col-md-4 text-justify">
+          <div>
+            <h5 class="text-danger text-center"><strong>Heading</strong></h5>
+            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for
+              previewing layouts and visual mockups.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+  <ul class='nav'>
+    <li class='active'>Home</li>
+    <li>
+      <div class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Personal asset loans</a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+          <li><a href="#">asds</a></li>
+          <li class="divider"></li>
+        </ul>
+      </div>
+    </li>
+    <li>Payday loans</li>
+    <li>About</li>
+    <li>Contact</li>
+  </ul>
+  <script src="{{url_for('static',filename='js/jquery-3.4.1.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+
+
+</body>
+
+</html>

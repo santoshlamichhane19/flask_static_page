@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{%block content%}
+
+<div class="container-fluid mb-4">
+    <div class="row">
+        <div class="col-md-4 shadow">
+            <div class="card  ">
+                <div class="card-header text-center text-light  bg-dark">Study in USA</div>
+                <div class="card-body shadow ">
+                    <img class="img-fluid img-thumbnail" src="{{url_for('static', filename='img/studyinusa.jpg')}}">
+                </div>
+                <div class="card-footer text-center text-light  bg-light"><a
+                        class="nav-link btn btn-dark border shadow">More Info Here</a></div>
+
+            </div>
+        </div>
+        <div class="col-md-4 shadow">
+            <div class="card  ">
+                <div class="card-header text-center text-light  bg-dark">Study in UK</div>
+                <div class="card-body shadow ">
+                    <img class="img-fluid img-thumbnail" src="{{url_for('static', filename='img/studyinuk.jpg')}}">
+                </div>
+                <div class="card-footer text-center text-light  bg-light"><a
+                        class="nav-link btn btn-dark border shadow-lg">More Info Here</a></div>
+            </div>
+
+        </div>
+        <div class="col-md-4 shadow">
+            <div class="card ">
+                <div class="card-header text-center text-light  bg-dark">Study in Australia</div>
+                <div class="card-body shadow ">
+                    <img class="img-fluid img-thumbnail" src="{{url_for('static', filename='img/studyinaus.jpg')}}">
+                </div>
+                <div class="card-footer text-center text-light  bg-light"><a
+                        class="nav-link btn btn-dark border shadow">More Info Here</a></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock content%}
